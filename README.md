@@ -195,14 +195,13 @@ For updating;
 http://<serverIP>/set_search_info?<act>=<type>&lprcount=<count>&lpr_plate=<platenum>&lpr_oplate=<platenum>&lpr_user=<user>&lpr_paystatus=<paystatus>&lpr_schedule_s=<schedule_s>&lpr_schedule_e=<schedule_e>&lpr_other=<other>&lpr_detect_endtime=<endtime>
 ```
 Parameters: <BR>
-Parameter	Values	Description
-act	Text	add: add number plate to a db
-update: update number plate to a db
-type	Text	black, white
-count	Number	Number of items
-platenum	Text 	The number plate
-User	Text	User name
-paystatus	0~3	Detect level
+| Parameter	| Values	| Description
+| act	| Text	| add: add number plate to a db, update: update number plate to a db
+| type	| Text	| black, white
+| count	Number	Number of items
+| platenum	| Text 	| The number plate
+| User	| Text	| User name
+| paystatus| 	0~3	| Detect level
 0: Very Weak
 1: Weak
 2: Normal
