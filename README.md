@@ -128,7 +128,7 @@ Day=0
 LPR0=647CBA,ACT_PARAM0=Visitor,ROI_X0=96,ROI_Y0=54,ROI_W0=1728,ROI_H0=972,LP_X0=1108,LP_Y0=420,LP_W0=440,LP_H0=144,LPR_TIME0=2019-06-24 16:58:44 GMT,LP_BMP0=LPR_IMAGE/20190624165844_95798lp_647CBA_132.png
 LPR1=,ACT_PARAM1=,ROI_X1=,ROI_Y1=,ROI_W1=,ROI_H1=,LP_X1=,LP_Y1=,LP_W1=,LP_H1=,LPR_TIME1=,LP_BMP1= LPR2=,ACT_PARAM2=,ROI_X2=,ROI_Y2=,ROI_W2=,ROI_H2=,LP_X2=,LP_Y2=,LP_W2=,LP_H2=,LPR_TIME2=,LP_BMP2= LPR3=,ACT_PARAM3=,ROI_X3=,ROI_Y3=,ROI_W3=,ROI_H3=,LP_X3=,LP_Y3=,LP_W3=,LP_H3=,LPR_TIME3=,LP_BMP3=
 
-Parameters:
+Parameters:<BR>
 
 ## HTTP POST NOTIFICATION
  
@@ -150,7 +150,7 @@ For text:
 ```
 eventhttppost?channel=1&servername=httpservername&server=192.168.3.88&port=8080&account=1&password=1&am_http_jpeg=0&jsoninfo=CAMERA%25CAM_NAME%25&urlinfo=%2FTEST
 ```
-Parameters:
+Parameters: <BR>
 
 ## DELETE LPR EVENT LIST 
 ### 5.1 Delete all LPR list
@@ -172,7 +172,7 @@ Get all detected number plates including denial, allowed, and visitor lists.
 Syntax:
 http://<serverIP>/set_search_info?delete=<type>&lprcount=<count>&lpr_oplate=<plate>
 ```
-Examples:
+Examples: <BR>
 /set_search_info?delete=black&lprcount=1&lpr_oplate=ABC123
 /set_search_info?delete=white&lprcount=1&lpr_oplate=ABC123
 /set_search_info?delete=customer&lprcount=1&lpr_oplate=ABC123
@@ -194,7 +194,7 @@ For updating;
 ```
 http://<serverIP>/set_search_info?<act>=<type>&lprcount=<count>&lpr_plate=<platenum>&lpr_oplate=<platenum>&lpr_user=<user>&lpr_paystatus=<paystatus>&lpr_schedule_s=<schedule_s>&lpr_schedule_e=<schedule_e>&lpr_other=<other>&lpr_detect_endtime=<endtime>
 ```
-Parameters:
+Parameters: <BR>
 Parameter	Values	Description
 act	Text	add: add number plate to a db
 update: update number plate to a db
