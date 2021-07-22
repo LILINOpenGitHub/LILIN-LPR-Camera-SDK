@@ -6,8 +6,8 @@ This document, LILIN IP camera automatic number plate recognition (LPR) protocol
 ## PORT NUMBER
 There are two series of camera S series and 7 series (AI).  For the port number: please use correct port number for HTTP communicatioin.
 
-S series: 80 port
-7 series (Aida): 8592 port
+S series: 80 port <BR>
+7 series (Aida): 8592 port <BR>
 
 ## GET LPR EVENT LIST <BR>
 ### Get all LPR log list <BR>
