@@ -5,6 +5,7 @@ This document, LILIN IP camera automatic number plate recognition (LPR) protocol
 
 Chapter 2.  GET LPR EVENT LIST
 Chapter 2.1 Get all LPR log list
+
 Get all detected number plates including denial, allowed, and visitor lists.
 Syntax:
 http://<serverIP>/get_search_info?list=log
