@@ -114,5 +114,23 @@ LPR1=,ACT_PARAM1=,ROI_X1=,ROI_Y1=,ROI_W1=,ROI_H1=,LP_X1=,LP_Y1=,LP_W1=,LP_H1=,LP
 
 Parameters:
 
+  Chapter 4.  HTTP POST NOTIFICATION
+
+Syntax:
+
+For JPEG
+http://<serverIP>/eventhttppost?channel=<ch>&servername=<servename>&server=<dns>&port=<port>&account=<username>&password=<password>&am_http_jpeg=<sendjpeg>&streaminx=<encoder>&filemode=<filenameformat>&filename=<filename>urlinfo=%2F<url>
+
+For text
+http://<serverIP>/eventhttppost?channel=<ch>&servername=<servename>&server=<dns>&port=<port>&account=<username>&password=<password>&am_http_jpeg=<sendjpeg>&jsoninfo=<json>&urlinfo=%2F<url>
+Example:
+For JPEG:
+/eventhttppost?channel=1&servername=httpservername&server=192.168.3.88&port=8080&account=1&password=1&am_http_jpeg=1&streaminx=3&filemode=0&filename=snap&urlinfo=%2FTEST
+
+For text:
+eventhttppost?channel=1&servername=httpservername&server=192.168.3.88&port=8080&account=1&password=1&am_http_jpeg=0&jsoninfo=CAMERA%25CAM_NAME%25&urlinfo=%2FTEST
+
+Parameters:
+
 
 
