@@ -30,7 +30,7 @@ Return:
 {"INDEX":2,"TS":"","MOD_TS":"","CAR_ID":"","LPR":"YP8549","RTIME":"","ACTION":"","ACT_PARAM":"black","THRESHOLD":"","ROI_X":"","ROI_Y":"","ROI_W":"","ROI_H":"","LP_X":"","LP_Y":"","LP_W":"","LP_H":"",
 "LP_BMP":"","ROI_BMP":"","COUNTRY":"","LPR_USER":"CCC","LPR_PHONE":"","LPR_ADDRESS":"","LPR_PAYSTATUS":"2","LPR_EXIST":"","LPR_SCHEDULE_S":"00:00","LPR_SCHEDULE_E":"23:59","LPR_OTHER":"","LPR_DETECT_ENDTIME":"2018-12-31_23:59"}],"LIST_TYPE": "black"}
 
-### 2.3 Get LPR allowed list
+### Get LPR allowed list
 Syntax:
 http://<serverIP>/get_search_info?list=white
 
@@ -40,7 +40,7 @@ Return:
 
 "LP_BMP":"images/20180410025922_878744lp_7336GN_1238.png","ROI_BMP":"","COUNTRY":"KGZ","LPR_USER":"BBB","LPR_PHONE":"","LPR_ADDRESS":"","LPR_PAYSTATUS":"2","LPR_EXIST":"","LPR_SCHEDULE_S":"00:00","LPR_SCHEDULE_E":"23:59","LPR_OTHER":"","LPR_DETECT_ENDTIME":"2019-12-31_23:59"}],"LIST_TYPE": "white"}
 
-###  2.4 Get LPR visitor list
+### Get LPR visitor list
 Syntax:
 http://<serverIP>/get_search_info?list= customer
 
@@ -51,7 +51,7 @@ Return:
 
 "LP_BMP":"images/20180410131511_508987lp_B0692_3153.png","ROI_BMP":"","COUNTRY":"ROU","LPR_USER":"","LPR_PHONE":"","LPR_ADDRESS":"","LPR_PAYSTATUS":"","LPR_EXIST":"","LPR_SCHEDULE_S":"","LPR_SCHEDULE_E":"","LPR_OTHER":"","LPR_DETECT_ENDTIME":""}],"LIST_TYPE": "customer"}
 
-Chapter 2.5 Get LPR engine detail
+### Get LPR engine detail
 Syntax:
 http://<serverIP>/server
 
@@ -59,7 +59,7 @@ Return:
 
 device name=SG1122LPR-HT MAC address=00-0f-fc-45-03-21 logoEnable=1 Software Version=2.7.94 Model=516 TVSYSTEM=0 Language=0 DhcpEnable=0 SysFeature=328720255 aaa=1 IrisMode=0 IrisLevel=1 PTZ_CAM_ID=1 INTERNAL=516 staus:94:28:44: 0:25: 0: 0: 0:41 StreamStatus=1 Model Name=SG1122LPR-HT DDRTiming=1 OVDriver=1 IVS=0 network_recover=1 SVN_VERSION=7969 profiles=1 SE=1 RecordExtension=avi LPR_KIND=LPR_TW_FAST
 
-### 2.6 Delete LPR event lists
+### Delete LPR event lists
 
 Delete all LPR log lists.
 Syntax:
@@ -85,7 +85,7 @@ http://<serverIP>/set_search_info?clean=customer
 
 Return: clean ok
 
-## 3.  GET RUN-TIME LPR EVENT LIST
+## GET RUN-TIME LPR EVENT LIST
 Syntax:
 http://<serverIP>/getalarmmotion
 Return:
@@ -114,7 +114,7 @@ LPR1=,ACT_PARAM1=,ROI_X1=,ROI_Y1=,ROI_W1=,ROI_H1=,LP_X1=,LP_Y1=,LP_W1=,LP_H1=,LP
 
 Parameters:
 
-## 4.  HTTP POST NOTIFICATION
+## HTTP POST NOTIFICATION
 
 Syntax:
 
@@ -132,8 +132,8 @@ eventhttppost?channel=1&servername=httpservername&server=192.168.3.88&port=8080&
 
 Parameters:
 
-Chapter 5.  DELETE LPR EVENT LIST 
-Chapter 5.1 Delete all LPR list
+## DELETE LPR EVENT LIST 
+### 5.1 Delete all LPR list
 Get all detected number plates including denial, allowed, and visitor lists..
 Syntax:
 http://<serverIP>/set_search_info?clean=<type>
@@ -145,7 +145,7 @@ Examples:
 /set_search_info?clean=white
 /set_search_info?clean=customer
 
-Chapter 5.2 Delete items of an LPR list
+### 5.2 Delete items of an LPR list
 Get all detected number plates including denial, allowed, and visitor lists.
 
 Syntax:
@@ -162,7 +162,7 @@ Return:
 <lpr_res>0</lpr_res>
 </lprinfo>
 
-Chapter 6.  SET LPR DB LIST
+## SET LPR DB LIST
 Set number plates into a database
 Syntax:
 For adding:
@@ -212,7 +212,7 @@ Return:
 <lpr_res>0</lpr_res>
 </lprinfo>
 
-Chapter 7.  IMPORT & EXPORT DENIAL & ALLOWED LISTS
+## IMPORT & EXPORT DENIAL & ALLOWED LISTS
 Import a CSV file into LPR DB. 
 Syntax:
 http://<serverIP>/import_lpr_list
@@ -227,4 +227,48 @@ http://<serverIP>/get_search_info?download=ALL
 
 listinfo.csv data format
 
+## GET THE NUMBER PLATE SNAPSHOT
+
+http://192.168.123.223/LPR_IMAGE/20180214001246_566983lp_AFY8385_34092.png
+Note: The path and file name of images, please refer to Chapter 2.1 Get All LPR log list.
+
+## RESTART RECOGNITION SYSTEM
+To restart recognition, send the CGI for enabling recognition. 
+Syntax:
+http://<serverIP>/set_search_info?restart=detect
+
+
+## ENABLE or DISABLE DENIAL or ALLOWED DETECTION
+To active LPR, denial and allowed detection lists.  Send the CGI for enabling or disabling. 
+Syntax:
+For LPR detection
+
+http://<serverIP>/lpr_info?set=status&LPR_FLAG=<act>
+
+For Denial and Allowed detection
+
+http://<serverIP>/lpr_info?set=status&LPR_FLAG=<act>
+
+Example:
+
+/lpr_info?set=status&LPR_FLAG=0
+/lpr_info?set=status&LPR_BLACK_FLAG=0
+/lpr_info?set=status&LPR_WHITE_FLAG=0
+
+
+Parameters:
+Chapter 12.  IMPORT & EXPORT Mapping Table
+Import a CSV file into LPR DB. 
+Syntax:
+http://<serverIP>/import_lpr_map_list
+
+Note: This command has to be used by POST, and attach the mapping_info.csv file.
+Note: The file should be utf8 with Bom format.
+Note: The file name needs to be mapping_info.csv
+
+Export a CSV file from LPR MAPPING DB.
+Syntax:
+http://<serverIP>/get_search_info?download=mapping
+
+mapping_info.csv data format
 
