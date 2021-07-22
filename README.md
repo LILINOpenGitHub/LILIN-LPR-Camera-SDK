@@ -179,15 +179,15 @@ Return:
 ## SET LPR DB LIST
 Set number plates into a database
 For adding
-Syntax:
 ```
+Syntax:
 http://<serverIP>/set_search_info?<act>=<type>&lprcount=<count>&lpr_plate=<platenum>&lpr_user=<user>&lpr_paystatus=<paystatus>&lpr_schedule_s=<schedule_s>&lpr_schedule_e=<schedule_e>&lpr_other=<other>&lpr_detect_endtime=<endtime>
 ```
 For updating;
 ```
 http://<serverIP>/set_search_info?<act>=<type>&lprcount=<count>&lpr_plate=<platenum>&lpr_oplate=<platenum>&lpr_user=<user>&lpr_paystatus=<paystatus>&lpr_schedule_s=<schedule_s>&lpr_schedule_e=<schedule_e>&lpr_other=<other>&lpr_detect_endtime=<endtime>
 ```
-	 Parameters:
+Parameters:
 Parameter	Values	Description
 act	Text	add: add number plate to a db
 update: update number plate to a db
@@ -241,8 +241,8 @@ Note: The file should be utf8 with Bom format.
 Note: The file name needs to be listinfo.csv.
 
 Export a CSV file from LPR DB.
-Syntax:
 ```
+Syntax:
 http://<serverIP>/get_search_info?download=ALL
 ```
 listinfo.csv data format
@@ -261,13 +261,15 @@ http://<serverIP>/set_search_info?restart=detect
 
 ## ENABLE or DISABLE DENIAL or ALLOWED DETECTION
 To active LPR, denial and allowed detection lists.  Send the CGI for enabling or disabling. 
-Syntax:
+
 For LPR detection
 ```
+Syntax:
 http://<serverIP>/lpr_info?set=status&LPR_FLAG=<act>
 ```
 For Denial and Allowed detection
 ```
+Syntax:
 http://<serverIP>/lpr_info?set=status&LPR_FLAG=<act>
 ```
 Example:
@@ -289,8 +291,8 @@ Note: The file should be utf8 with Bom format.
 Note: The file name needs to be mapping_info.csv
 
 Export a CSV file from LPR MAPPING DB.
-Syntax:
 ```
+Syntax:
 http://<serverIP>/get_search_info?download=mapping
 ```
 mapping_info.csv data format
