@@ -125,9 +125,10 @@ LPR1=,ACT_PARAM1=,ROI_X1=,ROI_Y1=,ROI_W1=,ROI_H1=,LP_X1=,LP_Y1=,LP_W1=,LP_H1=,LP
 Parameters:
 
 ## HTTP POST NOTIFICATION
+ 
+For JPEG
 ```
 Syntax:
-For JPEG
 http://<serverIP>/eventhttppost?channel=<ch>&servername=<servename>&server=<dns>&port=<port>&account=<username>&password=<password>&am_http_jpeg=<sendjpeg>&streaminx=<encoder>&filemode=<filenameformat>&filename=<filename>urlinfo=%2F<url>
 ```
 For text
