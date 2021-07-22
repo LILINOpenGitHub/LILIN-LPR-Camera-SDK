@@ -7,10 +7,10 @@ This document, LILIN IP camera automatic number plate recognition (LPR) protocol
 ### Get all LPR log list <BR>
 
 Get all detected number plates including denial, allowed, and visitor lists. <BR>
-  
+```
 Syntax:
 http://<serverIP>/get_search_info?list=log
-
+```
 Return: 
   
 {"LPR_COUNT": 47,"INFORMATION": [{"INDEX":1,"TS":"1523329437899288","MOD_TS":"2018-04-10 03:03:57 GMT","CAR_ID":"44","LPR":"30U9874","RTIME":"1038.0","ACTION":"0","ACT_PARAM":"denial","THRESHOLD":"0.795461475849152","ROI_X":"96","ROI_Y":"54","ROI_W":"1728","ROI_H":"972","LP_X":"1167","LP_Y":"120","LP_W":"612","LP_H":"108",
@@ -21,10 +21,10 @@ Return:
 
 ### Get LPR denial list
 Get all detected number plates including denial list.
-
+```
 Syntax:
 http://<serverIP>/get_search_info?list=black
-
+```
 Return: 
 
 {"LPR_COUNT": 2,"INFORMATION": [{"INDEX":1,"TS":"1523329437899288","MOD_TS":"2018-04-10 03:03:57 GMT","CAR_ID":"44","LPR":"30U9874","RTIME":"1038.0","ACTION":"0","ACT_PARAM":"denial","THRESHOLD":"0.795461475849152","ROI_X":"96","ROI_Y":"54","ROI_W":"1728","ROI_H":"972","LP_X":"1167","LP_Y":"120","LP_W":"612","LP_H":"108","LP_BMP":"images/20180410030357_899297lp_30U9874_1685.png","ROI_BMP":"","COUNTRY":"TUR","LPR_USER":"AAA","LPR_PHONE":"","LPR_ADDRESS":"","LPR_PAYSTATUS":"2","LPR_EXIST":"","LPR_SCHEDULE_S":"00:00","LPR_SCHEDULE_E":"23:59","LPR_OTHER":"","LPR_DETECT_ENDTIME":"2018-12-31_23:59"},
@@ -32,10 +32,10 @@ Return:
 "LP_BMP":"","ROI_BMP":"","COUNTRY":"","LPR_USER":"CCC","LPR_PHONE":"","LPR_ADDRESS":"","LPR_PAYSTATUS":"2","LPR_EXIST":"","LPR_SCHEDULE_S":"00:00","LPR_SCHEDULE_E":"23:59","LPR_OTHER":"","LPR_DETECT_ENDTIME":"2018-12-31_23:59"}],"LIST_TYPE": "black"}
 
 ### Get LPR allowed list
-
+```
 Syntax:
 http://<serverIP>/get_search_info?list=white
-
+```
 Return:
 
 {"LPR_COUNT": 1,"INFORMATION": [{"INDEX":1,"TS":"1523329162878730","MOD_TS":"2018-04-10 02:59:22 GMT","CAR_ID":"43","LPR":"7336GN","RTIME":"1035.0","ACTION":"0","ACT_PARAM":"allowed","THRESHOLD":"0.74889463186264","ROI_X":"96","ROI_Y":"54","ROI_W":"1728","ROI_H":"972","LP_X":"693","LP_Y":"303","LP_W":"264","LP_H":"51",
@@ -64,32 +64,38 @@ device name=SG1122LPR-HT MAC address=00-0f-fc-45-03-21 logoEnable=1 Software Ver
 ### Delete LPR event lists
 
 Delete all LPR log lists.
+```
 Syntax:
 http://<serverIP>/set_search_info?clean=log
-
+```
 Return: clean ok
 
 Delete the LPR denial list.
+```
 Syntax:
 http://<serverIP>/set_search_info?clean=black
-
+```
 Return: clean ok
 
 Delete the LPR allowed list.
+```
 Syntax:
 http://<serverIP>/set_search_info?clean=white
-
+```
 Return: clean ok
 
 Delete the LPR visitor list.
+```
 Syntax:
 http://<serverIP>/set_search_info?clean=customer
-
+```
 Return: clean ok
 
 ## GET RUN-TIME LPR EVENT LIST
+```
 Syntax:
 http://<serverIP>/getalarmmotion
+```
 Return:
 --myboundary
 Content-Type: text/plain
@@ -119,12 +125,13 @@ Parameters:
 ## HTTP POST NOTIFICATION
 
 Syntax:
-
+```
 For JPEG
 http://<serverIP>/eventhttppost?channel=<ch>&servername=<servename>&server=<dns>&port=<port>&account=<username>&password=<password>&am_http_jpeg=<sendjpeg>&streaminx=<encoder>&filemode=<filenameformat>&filename=<filename>urlinfo=%2F<url>
-
+```
 For text
 http://<serverIP>/eventhttppost?channel=<ch>&servername=<servename>&server=<dns>&port=<port>&account=<username>&password=<password>&am_http_jpeg=<sendjpeg>&jsoninfo=<json>&urlinfo=%2F<url>
+
 Example:
 For JPEG:
 /eventhttppost?channel=1&servername=httpservername&server=192.168.3.88&port=8080&account=1&password=1&am_http_jpeg=1&streaminx=3&filemode=0&filename=snap&urlinfo=%2FTEST
@@ -137,9 +144,10 @@ Parameters:
 ## DELETE LPR EVENT LIST 
 ### 5.1 Delete all LPR list
 Get all detected number plates including denial, allowed, and visitor lists..
+```
 Syntax:
 http://<serverIP>/set_search_info?clean=<type>
-
+```
 Examples:
 
 /set_search_info?clean=log
@@ -149,10 +157,10 @@ Examples:
 
 ### 5.2 Delete items of an LPR list
 Get all detected number plates including denial, allowed, and visitor lists.
-
+```
 Syntax:
 http://<serverIP>/set_search_info?delete=<type>&lprcount=<count>&lpr_oplate=<plate>
-
+```
 Examples:
 /set_search_info?delete=black&lprcount=1&lpr_oplate=ABC123
 /set_search_info?delete=white&lprcount=1&lpr_oplate=ABC123
@@ -166,10 +174,11 @@ Return:
 
 ## SET LPR DB LIST
 Set number plates into a database
+```
 Syntax:
 For adding:
 http://<serverIP>/set_search_info?<act>=<type>&lprcount=<count>&lpr_plate=<platenum>&lpr_user=<user>&lpr_paystatus=<paystatus>&lpr_schedule_s=<schedule_s>&lpr_schedule_e=<schedule_e>&lpr_other=<other>&lpr_detect_endtime=<endtime>
-
+```
 For updating;
 http://<serverIP>/set_search_info?<act>=<type>&lprcount=<count>&lpr_plate=<platenum>&lpr_oplate=<platenum>&lpr_user=<user>&lpr_paystatus=<paystatus>&lpr_schedule_s=<schedule_s>&lpr_schedule_e=<schedule_e>&lpr_other=<other>&lpr_detect_endtime=<endtime>
 
@@ -216,9 +225,10 @@ Return:
 
 ## IMPORT & EXPORT DENIAL & ALLOWED LISTS
 Import a CSV file into LPR DB. 
+```
 Syntax:
 http://<serverIP>/import_lpr_list
-
+```
 Note: This command has to be used by POST, and attach the listinfo.csv file.
 Note: The file should be utf8 with Bom format.
 Note: The file name needs to be listinfo.csv.
@@ -236,9 +246,10 @@ Note: The path and file name of images, please refer to Chapter 2.1 Get All LPR 
 
 ## RESTART RECOGNITION SYSTEM
 To restart recognition, send the CGI for enabling recognition. 
+```
 Syntax:
 http://<serverIP>/set_search_info?restart=detect
-
+```
 
 ## ENABLE or DISABLE DENIAL or ALLOWED DETECTION
 To active LPR, denial and allowed detection lists.  Send the CGI for enabling or disabling. 
@@ -261,9 +272,10 @@ Example:
 Parameters:
 Chapter 12.  IMPORT & EXPORT Mapping Table
 Import a CSV file into LPR DB. 
+```
 Syntax:
 http://<serverIP>/import_lpr_map_list
-
+```
 Note: This command has to be used by POST, and attach the mapping_info.csv file.
 Note: The file should be utf8 with Bom format.
 Note: The file name needs to be mapping_info.csv
