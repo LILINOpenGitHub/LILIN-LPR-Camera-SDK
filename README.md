@@ -132,5 +132,99 @@ eventhttppost?channel=1&servername=httpservername&server=192.168.3.88&port=8080&
 
 Parameters:
 
+Chapter 5.  DELETE LPR EVENT LIST 
+Chapter 5.1 Delete all LPR list
+Get all detected number plates including denial, allowed, and visitor lists..
+Syntax:
+http://<serverIP>/set_search_info?clean=<type>
+
+Examples:
+
+/set_search_info?clean=log
+/set_search_info?clean=black
+/set_search_info?clean=white
+/set_search_info?clean=customer
+
+Chapter 5.2 Delete items of an LPR list
+Get all detected number plates including denial, allowed, and visitor lists.
+
+Syntax:
+http://<serverIP>/set_search_info?delete=<type>&lprcount=<count>&lpr_oplate=<plate>
+
+Examples:
+/set_search_info?delete=black&lprcount=1&lpr_oplate=ABC123
+/set_search_info?delete=white&lprcount=1&lpr_oplate=ABC123
+/set_search_info?delete=customer&lprcount=1&lpr_oplate=ABC123
+
+Return: 
+<?xml version="1.0" encoding="UTF-8"?>
+-<lprinfo>
+<lpr_res>0</lpr_res>
+</lprinfo>
+
+Chapter 6.  SET LPR DB LIST
+Set number plates into a database
+Syntax:
+For adding:
+http://<serverIP>/set_search_info?<act>=<type>&lprcount=<count>&lpr_plate=<platenum>&lpr_user=<user>&lpr_paystatus=<paystatus>&lpr_schedule_s=<schedule_s>&lpr_schedule_e=<schedule_e>&lpr_other=<other>&lpr_detect_endtime=<endtime>
+
+For updating;
+http://<serverIP>/set_search_info?<act>=<type>&lprcount=<count>&lpr_plate=<platenum>&lpr_oplate=<platenum>&lpr_user=<user>&lpr_paystatus=<paystatus>&lpr_schedule_s=<schedule_s>&lpr_schedule_e=<schedule_e>&lpr_other=<other>&lpr_detect_endtime=<endtime>
+
+	 Parameters:
+Parameter	Values	Description
+act	Text	add: add number plate to a db
+update: update number plate to a db
+type	Text	black, white
+count	Number	Number of items
+platenum	Text 	The number plate
+User	Text	User name
+paystatus	0~3	Detect level
+0: Very Weak
+1: Weak
+2: Normal
+3: Strong
+schedule_s	HH:mm	HH: hour, mm: minute, ex 07:00
+schedule_e	HH:mm	HH: hour, mm: minute, ex 17:00
+endtime	YYYY-MM-DD_HH:mm	2018-02-12_10:25
+
+Examples of adding a number plate to a db:
+
+/set_search_info?add=black&lprcount=1&lpr_plate=ABC123&lpr_user=TEST123&lpr_paystatus=0&lpr_schedule_s=01:00&lpr_schedule_e=07:00&lpr_other=other123&lpr_detect_endtime=2018-02-12_10:25
+
+/set_search_info?add=white&lprcount=1&lpr_plate=ABC123&lpr_user=TEST123&lpr_paystatus=0&lpr_schedule_s=01:00&lpr_schedule_e=07:00&lpr_other=other123&lpr_detect_endtime=2018-02-12_10:25
+
+Return: 
+<?xml version="1.0" encoding="UTF-8"?>
+-<lprinfo>
+<lpr_res>0</lpr_res>
+</lprinfo>
+
+Examples of updating a number plate into a db:
+
+/set_search_info?update=black&lprcount=1&lpr_plate=ABC123&lpr_oplate=ABC123&lpr_user=test123&lpr_paystatus=0&lpr_schedule_s=05:03&lpr_schedule_e=06:12&lpr_other=other567&lpr_detect_endtime=2018-02-12_10:25
+
+/set_search_info?update=white&lprcount=1&lpr_plate=ABC123&lpr_oplate=ABC123&lpr_user=test123&lpr_paystatus=0&lpr_schedule_s=05:03&lpr_schedule_e=06:12&lpr_other=other567&lpr_detect_endtime=2018-02-12_10:25
+
+Return: 
+<?xml version="1.0" encoding="UTF-8"?>
+-<lprinfo>
+<lpr_res>0</lpr_res>
+</lprinfo>
+
+Chapter 7.  IMPORT & EXPORT DENIAL & ALLOWED LISTS
+Import a CSV file into LPR DB. 
+Syntax:
+http://<serverIP>/import_lpr_list
+
+Note: This command has to be used by POST, and attach the listinfo.csv file.
+Note: The file should be utf8 with Bom format.
+Note: The file name needs to be listinfo.csv.
+
+Export a CSV file from LPR DB.
+Syntax:
+http://<serverIP>/get_search_info?download=ALL
+
+listinfo.csv data format
 
 
