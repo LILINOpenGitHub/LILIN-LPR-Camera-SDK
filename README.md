@@ -59,4 +59,60 @@ Return:
 
 device name=SG1122LPR-HT MAC address=00-0f-fc-45-03-21 logoEnable=1 Software Version=2.7.94 Model=516 TVSYSTEM=0 Language=0 DhcpEnable=0 SysFeature=328720255 aaa=1 IrisMode=0 IrisLevel=1 PTZ_CAM_ID=1 INTERNAL=516 staus:94:28:44: 0:25: 0: 0: 0:41 StreamStatus=1 Model Name=SG1122LPR-HT DDRTiming=1 OVDriver=1 IVS=0 network_recover=1 SVN_VERSION=7969 profiles=1 SE=1 RecordExtension=avi LPR_KIND=LPR_TW_FAST
 
+Chapter 2.6 Delete LPR event lists
+
+Delete all LPR log lists.
+Syntax:
+http://<serverIP>/set_search_info?clean=log
+
+Return: clean ok
+
+Delete the LPR denial list.
+Syntax:
+http://<serverIP>/set_search_info?clean=black
+
+Return: clean ok
+
+Delete the LPR allowed list.
+Syntax:
+http://<serverIP>/set_search_info?clean=white
+
+Return: clean ok
+
+Delete the LPR visitor list.
+Syntax:
+http://<serverIP>/set_search_info?clean=customer
+
+Return: clean ok
+
+Chapter 3.  GET RUN-TIME LPR EVENT LIST
+Syntax:
+http://<serverIP>/getalarmmotion
+Return:
+--myboundary
+Content-Type: text/plain
+CamTime:2018-04-10 14:24:08
+
+MotionDetect=0
+AlarmInputDetect=0
+AlarmInput2Detect=0
+AlarmInput3Detect=0
+AlarmInput4Detect=0
+AlarmInput5Detect=0
+AlarmInput6Detect=0
+AudioDetect=0
+TemperDetect=0
+FaceDetectNumber=0
+AlarmOutputStatus=0
+AlarmOutput2Status=0
+PIRDetect=0
+DoorBell=0
+LUX=0
+Day=0
+LPR0=647CBA,ACT_PARAM0=Visitor,ROI_X0=96,ROI_Y0=54,ROI_W0=1728,ROI_H0=972,LP_X0=1108,LP_Y0=420,LP_W0=440,LP_H0=144,LPR_TIME0=2019-06-24 16:58:44 GMT,LP_BMP0=LPR_IMAGE/20190624165844_95798lp_647CBA_132.png
+LPR1=,ACT_PARAM1=,ROI_X1=,ROI_Y1=,ROI_W1=,ROI_H1=,LP_X1=,LP_Y1=,LP_W1=,LP_H1=,LPR_TIME1=,LP_BMP1= LPR2=,ACT_PARAM2=,ROI_X2=,ROI_Y2=,ROI_W2=,ROI_H2=,LP_X2=,LP_Y2=,LP_W2=,LP_H2=,LPR_TIME2=,LP_BMP2= LPR3=,ACT_PARAM3=,ROI_X3=,ROI_Y3=,ROI_W3=,ROI_H3=,LP_X3=,LP_Y3=,LP_W3=,LP_H3=,LPR_TIME3=,LP_BMP3=
+
+Parameters:
+
+
 
