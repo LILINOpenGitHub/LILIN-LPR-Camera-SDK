@@ -199,11 +199,11 @@ Parameters: <BR>
 | --- | --- | --- |
 | act	| Text	| add: add number plate to a db, update: update number plate to a db |
 | type	| Text	| black, white |
-| count	Number	Number of items |
+| count	| Number | 	Number of items |
 | platenum	| Text 	| The number plate |
-| User	| Text	| User name |
-| schedule_s	| HH:mm	HH: |hour, mm: minute, ex 07:00 |
-| schedule_e	| HH:mm	HH: |hour, mm: minute, ex 17:00 |
+| user	| Text	| The username |
+| schedule_s	| HH:mm	HH: | hour, mm: minute, ex 07:00 |
+| schedule_e	| HH:mm	HH: | hour, mm: minute, ex 17:00 |
 | endtime	| YYYY-MM-DD_HH:mm	| 2018-02-12_10:25 |
 
 Examples of adding a number plate to a db:
