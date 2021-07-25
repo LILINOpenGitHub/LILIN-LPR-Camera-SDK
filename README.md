@@ -29,13 +29,10 @@ Return:
 {"INDEX":2,"TS":"1523329162878730","MOD_TS":"2018-04-10 02:59:22 GMT","CAR_ID":"43","LPR":"7336GN","RTIME":"1035.0","ACTION":"0","ACT_PARAM":"allowed","THRESHOLD":"0.74889463186264","ROI_X":"96","ROI_Y":"54","ROI_W":"1728","ROI_H":"972","LP_X":"693","LP_Y":"303","LP_W":"264","LP_H":"51",
 "LP_BMP":"images/20180410025922_878744lp_7336GN_1238.png","ROI_BMP":"","COUNTRY":"KGZ","LPR_USER":"","LPR_PHONE":"","LPR_ADDRESS":"","LPR_PAYSTATUS":"","LPR_EXIST":"","LPR_SCHEDULE_S":"","LPR_SCHEDULE_E":"","LPR_OTHER":"","LPR_DETECT_ENDTIME":""},
 
-| Parameter	| Values	| Description | 
-| --- | --- |
-| LPR_COUNT	| 1~1000 | Log list: max.1000, Denial list: max.100, Allowed list: max.1000, Visitor list: max. 1000 | 
 
 | Parameter	| Values	| Description |
 | --- | --- | --- |
-| act	| Text	| add: add number plate to a db, update: update number plate to a db |
+| LPR_COUNT	| 1~1000	| Log list: max.1000, Denial list: max.100, Allowed list: max.1000, Visitor list: max. 1000 |
   
 ### Get LPR denial list
 Get all detected number plates including denial list.
