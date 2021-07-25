@@ -29,6 +29,45 @@ Return:
 {"INDEX":2,"TS":"1523329162878730","MOD_TS":"2018-04-10 02:59:22 GMT","CAR_ID":"43","LPR":"7336GN","RTIME":"1035.0","ACTION":"0","ACT_PARAM":"allowed","THRESHOLD":"0.74889463186264","ROI_X":"96","ROI_Y":"54","ROI_W":"1728","ROI_H":"972","LP_X":"693","LP_Y":"303","LP_W":"264","LP_H":"51",
 "LP_BMP":"images/20180410025922_878744lp_7336GN_1238.png","ROI_BMP":"","COUNTRY":"KGZ","LPR_USER":"","LPR_PHONE":"","LPR_ADDRESS":"","LPR_PAYSTATUS":"","LPR_EXIST":"","LPR_SCHEDULE_S":"","LPR_SCHEDULE_E":"","LPR_OTHER":"","LPR_DETECT_ENDTIME":""},
 
+| Parameter	| Values	| Description | 
+| --- | --- |
+| LPR_COUNT	| 1~1000	| Log list: max.1000, Denial list: max.100, Allowed list: max.1000, Visitor list: max. 1000
+| INDEX	| Number	| Index value| 
+| TS	| Number	| Detected License plate time value (TS/1000=MOD_TS) | 
+| MOD_TS	| YYYY-MM-DD hh:mm:ss	| Detected license place time | 
+| CAR_ID	| Number	| Car index value | 
+| LPR	| Text & number	| License Plate Number | 
+| RTIME	| N/A	| Undefined | 
+| ACTION	| N/A	| Undefined | 
+| ACT_PARAM	| denial, allowed, visitor	| List Type | 
+| THRESHOLD	| Number	| Detected license plate threshold value | 
+| ROI_X:
+ROI_Y:
+ROI_W:
+ROI_H:	| Number	| License plate detection region size. | 
+| LP_X:
+LP_Y:
+LP_W:
+LP_H:	| Number	| Detected license plate location.| 
+| LP_BMP	| Number	| License plate saved file path. Max.100 | 
+ROI_BMP	N/A	Undefined
+COUNTRY	Text	License plate country.(Inaccurate)
+LPR_USER	Text	Denial & Allowed list上的user name
+LPR_PHONE	N/A	Reserved
+LPR_ADDRESS	N/A	Reserved
+LPR_PAYSTATUS	0~3	Detect level (Supported: Denial & Allowed list)
+0: Very Weak
+1: Weak
+2: Normal
+3: Strong
+LPR_EXIST	N/A	Empty
+LPR_SCHEDULE_S	00:00~23:59	Detection Start Time (Supported: Denial & Allowed list)
+LPR_SCHEDULE_E	00:00~23:59	Detection End Time (Supported: Denial & Allowed list)
+LPR_OTHER	Text	Remarks
+Others on Denial & Allowed list
+LPR_DETECT_ENDTIME	YYYY-MM-DD_hh:mm	License Plate Detection Time Limit (Supported: Denial & Allowed list)
+LIST_TYPE	black, white, customer	List Type
+
 ### Get LPR denial list
 Get all detected number plates including denial list.
 ```
