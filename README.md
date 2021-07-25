@@ -164,10 +164,10 @@ LPR1=,ACT_PARAM1=,ROI_X1=,ROI_Y1=,ROI_W1=,ROI_H1=,LP_X1=,LP_Y1=,LP_W1=,LP_H1=,LP
 Parameters:<BR>
 | Parameter	| Values	| Description | 
 | --- | --- | --- |
-| LPR<number> | 	0~3 	Max plate number of detected plates: 1~4
-| LPR | 	Text & number	License plate number | 
+| LPR<number> | 0~3  | Max plate number of detected plates: 1~4  | 
+| LPR | Text & number | License plate number | 
 | ACT_PARAM	 | denial, allowed, visitor	 | List Type  | 
-ROI_X
+| ROI_X
 ROI_Y
 ROI_W
 ROI_H	 | Number	 | License plate detection region size  | 
