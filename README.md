@@ -32,6 +32,10 @@ Return:
 | Parameter	| Values	| Description | 
 | --- | --- |
 | LPR_COUNT	| 1~1000 | Log list: max.1000, Denial list: max.100, Allowed list: max.1000, Visitor list: max. 1000 | 
+
+| Parameter	| Values	| Description |
+| --- | --- | --- |
+| act	| Text	| add: add number plate to a db, update: update number plate to a db |
   
 ### Get LPR denial list
 Get all detected number plates including denial list.
