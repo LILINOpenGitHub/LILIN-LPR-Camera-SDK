@@ -50,23 +50,22 @@ LP_Y:
 LP_W:
 LP_H:	| Number	| Detected license plate location.| 
 | LP_BMP	| Number	| License plate saved file path. Max.100 | 
-ROI_BMP	N/A	Undefined
-COUNTRY	Text	License plate country.(Inaccurate)
-LPR_USER	Text	Denial & Allowed list上的user name
-LPR_PHONE	N/A	Reserved
-LPR_ADDRESS	N/A	Reserved
-LPR_PAYSTATUS	0~3	Detect level (Supported: Denial & Allowed list)
+| ROI_BMP	| N/A	| Undefined | 
+| COUNTRY	| Text	| License plate country.(Inaccurate) | 
+| LPR_USER	| Text	| Denial & Allowed list user name | 
+| LPR_PHONE	| N/A	| Reserved | 
+| LPR_ADDRESS	| N/A	| Reserved | 
+|  LPR_PAYSTATUS	| 0~3	| Detect level (Supported: Denial & Allowed list)
 0: Very Weak
 1: Weak
 2: Normal
-3: Strong
-LPR_EXIST	N/A	Empty
-LPR_SCHEDULE_S	00:00~23:59	Detection Start Time (Supported: Denial & Allowed list)
-LPR_SCHEDULE_E	00:00~23:59	Detection End Time (Supported: Denial & Allowed list)
-LPR_OTHER	Text	Remarks
-Others on Denial & Allowed list
-LPR_DETECT_ENDTIME	YYYY-MM-DD_hh:mm	License Plate Detection Time Limit (Supported: Denial & Allowed list)
-LIST_TYPE	black, white, customer	List Type
+3: Strong| 
+| LPR_EXIST	| N/A	| Empty | 
+| LPR_SCHEDULE_S	| 00:00~23:59	Detection Start Time (Supported: Denial & Allowed list) | 
+| LPR_SCHEDULE_E	00:00~23:59	Detection End Time (Supported: Denial & Allowed list) | 
+| LPR_OTHER | 	Text	| Remarks Others on Denial & Allowed list | 
+| LPR_DETECT_ENDTIME	| YYYY-MM-DD_hh:mm	| License Plate Detection Time Limit (Supported: Denial & Allowed list) | 
+| LIST_TYPE	| black, white, customer	| List Type | 
 
 ### Get LPR denial list
 Get all detected number plates including denial list.
