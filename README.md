@@ -5,7 +5,7 @@ This document, LILIN IP camera automatic number plate recognition (LPR) protocol
 
 ##VIDEO DEMO
 
-![image](https://github.com/LILINOpenGitHub/LILIN-Edge-Aida-Camera/blob/main/images/r7084-me5kh.gif)
+![image](https://github.com/LILINOpenGitHub/LILIN-LPR-Camera-SDK/blob/main/images/byq65-g2ii7.gif)
 
 ## PORT NUMBER
 There are two series of camera S series and 7 series (AI).  For the port number: please use correct port number for HTTP communicatioin.
