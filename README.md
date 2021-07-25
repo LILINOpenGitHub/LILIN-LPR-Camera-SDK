@@ -3,7 +3,7 @@
 ## Overview
 This document, LILIN IP camera automatic number plate recognition (LPR) protocol SDK, specifies the integrations of using number plate database of LILIN IP camera. 
 
-##VIDEO DEMO
+## VIDEO DEMO
 
 ![image](https://github.com/LILINOpenGitHub/LILIN-LPR-Camera-SDK/blob/main/images/byq65-g2ii7.gif)
 
