@@ -162,21 +162,15 @@ LPR0=647CBA,ACT_PARAM0=Visitor,ROI_X0=96,ROI_Y0=54,ROI_W0=1728,ROI_H0=972,LP_X0=
 LPR1=,ACT_PARAM1=,ROI_X1=,ROI_Y1=,ROI_W1=,ROI_H1=,LP_X1=,LP_Y1=,LP_W1=,LP_H1=,LPR_TIME1=,LP_BMP1= LPR2=,ACT_PARAM2=,ROI_X2=,ROI_Y2=,ROI_W2=,ROI_H2=,LP_X2=,LP_Y2=,LP_W2=,LP_H2=,LPR_TIME2=,LP_BMP2= LPR3=,ACT_PARAM3=,ROI_X3=,ROI_Y3=,ROI_W3=,ROI_H3=,LP_X3=,LP_Y3=,LP_W3=,LP_H3=,LPR_TIME3=,LP_BMP3=
 
 Parameters:<BR>
-| Parameter	| Values	| Description | 
+| Parameter	| Values | Description | 
 | --- | --- | --- |
-| LPR<number> | 0~3  | Max plate number of detected plates: 1~4  | 
+| LPR<number> | 0~3 | Max plate number of detected plates: 1~4  | 
 | LPR | Text & number | License plate number | 
-| ACT_PARAM	 | denial, allowed, visitor	 | List Type  | 
-| ROI_X
-ROI_Y
-ROI_W
-ROI_H	 | Number	 | License plate detection region size  | 
-| LP_X
-LP_Y
-LP_W
-LP_H	 | Number	 | Detected license plate location.  | 
- | LPR_TIME	 | YYYY-MM-DD hh:mm:ss GMT	 | Detected license place time. | 
- | LP_BMP | 	 | 	Image path | 
+| ACT_PARAM | denial, allowed, visitor | List Type | 
+| ROI_X, ROI_Y, ROI_W, ROI_H | Number | License plate detection region size | 
+| LP_X, LP_Y, LP_W, LP_H | Number | Detected license plate location. | 
+| LPR_TIME | YYYY-MM-DD hh:mm:ss GMT | Detected license place time. | 
+| LP_BMP | 	 | Image path | 
 
 ## HTTP POST NOTIFICATION
  
