@@ -255,6 +255,9 @@ Examples of adding a number plate to a db:
 ```
 /set_search_info?add=white&lprcount=1&lpr_plate=ABC123&lpr_user=TEST123&lpr_paystatus=0&lpr_schedule_s=01:00&lpr_schedule_e=07:00&lpr_other=other123&lpr_detect_endtime=2018-02-12_10:25
 ```
+```
+curl -u "admin:Pass1234" "http://192.168.3.58:8592/set_search_info?add=white&lprcount=1&lpr_plate=ABC1234&lpr_user=TEST123&lpr_paystatus=0&lpr_schedule_s=01:00&lpr_schedule_e=07:00&lpr_other=other123&lpr_detect_endtime=2023-05-16_10:25"
+```
 Return: 
 <?xml version="1.0" encoding="UTF-8"?>
 -<lprinfo>
