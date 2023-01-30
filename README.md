@@ -295,7 +295,8 @@ http://<serverIP>/get_search_info?download=ALL
 ```
 ```
 Curl Syntax:
-curl -u admin:Pass123456 "http://192.168.0.200:8592/get_search_info?download=ALL" -o D:\\listinfo.csv
+
+curl -k -X POST -u "admin:Pass1234" -H "Expect:;User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64);Connection: keep-alive;Content-Type: multipart/form-data;" -F "data=D:\\listinfo.csv" -v http://192.168.3.58:8592/import_lpr_list
 ```
 listinfo.csv data format
 
@@ -332,7 +333,7 @@ Example:
 
 
 Parameters:
-Chapter 12.  IMPORT & EXPORT Mapping Table
+Import and export mapping Table
 Import a CSV file into LPR DB. 
 ```
 Syntax:
