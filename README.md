@@ -3,17 +3,17 @@
 ## Overview
 This document, LILIN IP camera automatic number plate recognition (LPR) protocol SDK, specifies the integrations of using number plate database of LILIN IP camera. 
 
-## VIDEO DEMO
+## Video demo
 
 ![image](https://github.com/LILINOpenGitHub/LILIN-LPR-Camera-SDK/blob/main/images/byq65-g2ii7.gif)
 
-## PORT NUMBER
+## Port number
 There are two series of camera S series and 7 series (AI).  For the port number: please use correct port number for HTTP communicatioin.
 
 S series: 80 port <BR>
 7 series (Aida): 8592 port <BR>
 
-## GET LPR EVENT LIST <BR>
+## Get LPR event list<BR>
 ### Get all LPR log list <BR>
 
 Get all detected number plates including denial, allowed, and visitor lists. <BR>
@@ -132,7 +132,7 @@ http://<serverIP>/set_search_info?clean=customer
 ```
 Return: clean ok
 
-## GET RUN-TIME LPR EVENT LIST
+## GET run-time LPR list
 ```
 Syntax:
 http://<serverIP>/getalarmmotion
@@ -194,8 +194,8 @@ eventhttppost?channel=1&servername=httpservername&server=192.168.3.88&port=8080&
 ```
 Parameters: <BR>
 
-## DELETE LPR EVENT LIST 
-### 5.1 Delete all LPR list
+## Delete LPR event list 
+### Delete all LPR list
 Get all detected number plates including denial, allowed, and visitor lists..
 ```
 Syntax:
@@ -225,7 +225,7 @@ Return:
 <lpr_res>0</lpr_res>
 </lprinfo>
 
-## SET LPR DB LIST
+## Set LPR db list
 Set number plates into a database
 For adding
 ```
@@ -278,7 +278,7 @@ Return:
 <lpr_res>0</lpr_res>
 </lprinfo>
 
-## IMPORT & EXPORT DENIAL & ALLOWED LISTS
+## Import & export denial and allowed lists
 Import a CSV file into LPR DB. 
 ```
 Syntax:
@@ -319,7 +319,7 @@ For LPR detection
 Syntax:
 http://<serverIP>/lpr_info?set=status&LPR_FLAG=<act>
 ```
-For Denial and Allowed detection
+For Denial and allowed detection
 ```
 Syntax:
 http://<serverIP>/lpr_info?set=status&LPR_FLAG=<act>
