@@ -84,7 +84,7 @@ Return:
 ### Get LPR visitor list
 ```
 Syntax:
-http://<serverIP>/get_search_info?list= customer
+http://<serverIP>/get_search_info?list=customer
 ```
 Return: 
 
